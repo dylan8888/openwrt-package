@@ -35,7 +35,7 @@ msgid "Upgrade to Stable Version"
 msgstr "更新到最新稳定版"
 
 msgid "Automatically update firmware during the specified time"
-msgstr "启用后将在指定时间段自动检查并更新固件"
+msgstr "启用后将在指定时间自动检测云端最新版如有新版就更新固件"
 
 msgid "Github Url"
 msgstr "Github 地址"
