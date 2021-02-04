@@ -30,7 +30,7 @@ function Nightly(){
     GET_Version_Type="Firmware"
     GET_FullVersion=$(cat /tmp/Firmware_Tags | egrep -o "openwrt-${CURRENT_Device}-${GET_Version_Type}-[0-9]+.[0-9]+.[0-9]+.[0-9]+.[a-z]+.[a-z]+" | awk 'END {print}')
     GET_Ver="${GET_FullVersion#*${CURRENT_Device}-}"
-    GET_Nightly="${GET_Ver:0:18}"
+    GET_Nightly="${GET_Ver:0:22}"
     echo $GET_Nightly
 }
 
