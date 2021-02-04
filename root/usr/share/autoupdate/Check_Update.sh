@@ -26,9 +26,9 @@ function Stable(){
 
 function Nightly(){
     Github_Tags=https://api.github.com/repos/${Author}/releases/latest
-    wget -q ${Github_Tags} -O - > /tmp/beta_Tags
-    GET_Version_Type="beta"
-    GET_FullVersion=$(cat /tmp/beta_Tags | egrep -o "openwrt-${CURRENT_Device}-${GET_Version_Type}-[0-9]+.[0-9]+.[0-9]+.[0-9]+.[a-z]+.[a-z]+" | awk 'END {print}')
+    wget -q ${Github_Tags} -O - > /tmp/firmware_Tags
+    GET_Version_Type="firmware"
+    GET_FullVersion=$(cat /tmp/firmware_Tags | egrep -o "openwrt-${CURRENT_Device}-${GET_Version_Type}-[0-9]+.[0-9]+.[0-9]+.[0-9]+.[a-z]+.[a-z]+" | awk 'END {print}')
     GET_Ver="${GET_FullVersion#*${CURRENT_Device}-}"
     GET_Nightly="${GET_Ver:0:18}"
     echo $GET_Nightly
